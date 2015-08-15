@@ -32,14 +32,9 @@ angular
         controllerAs: 'posts'
       })
       .when('/posts/:id', {
-        templateUrl: 'views/post.html',
+        templateUrl: 'scripts/views/post.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
