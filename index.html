@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.js"></script>
+    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/posts.js"></script>
+    <script src="scripts/services/post.js"></script>    
+  </head>
+    <body ng-app="blogClient">
+
+    <div ng-controller='PostsCtrl'>
+      <h1>{{value}}</h1>
+        <ul>
+          <li ng-repeat='post in posts'>
+            <p>{{post.content}}</p>
+          </li>
+        </ul>
+    </div>
+    
+  </body>
+</html>
