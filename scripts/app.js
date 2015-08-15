@@ -32,14 +32,21 @@ angular
         controllerAs: 'posts'
       })
       .when('/posts/:id', {
-        templateUrl: 'scripts/views/post.html',
+        templateUrl: 'scripts/views/show.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+
 
 
   // var app = angular.module("MyApp", []).
