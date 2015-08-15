@@ -32,7 +32,7 @@ angular
         controllerAs: 'posts'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/posts'
       });
   });
 

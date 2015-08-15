@@ -10,7 +10,6 @@
 
 angular.module('blogClient')
   .factory('Post', ['$resource', function ($resource) {
-    // return $resource('http://localhost:3000/posts/');
     return $resource("http://localhost:3000/posts/:id", { id: "@id" },
       {
         'create':  { method: 'POST' },

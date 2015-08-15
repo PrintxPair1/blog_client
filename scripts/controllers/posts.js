@@ -15,7 +15,6 @@ angular.module('blogClient')
     if(/\/posts\/\d*/.test($location.path())){ // e.g. /post/1
       $scope.post = Post.get({id: $routeParams.id});
     }
-
   }]);
   
   
