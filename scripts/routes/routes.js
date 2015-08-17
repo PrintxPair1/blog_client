@@ -22,12 +22,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/posts', {
-        templateUrl: 'scripts/views/posts.html',
+        templateUrl: 'scripts/views/posts/index.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
       .when('/posts/:id', {
-        templateUrl: 'scripts/views/post.html',
+        templateUrl: 'scripts/views/posts/show.html',
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
