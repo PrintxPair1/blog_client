@@ -1,82 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8">
-        <title>FG</title>
-        <meta name="description" content="An awesome HTML5 page YOU built from scratch!">
-        <meta name="author" content="fernanda">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body >
+<div ng_controller='ImagesCtrl'>
+    <div class="page-header">
+            <h1> <font color="RoyalBlue"> Camera access! <small>Testing</small></font></h1>
+    </div>
+
+    <div class="jumbotron">
         <div class="container">
-                <div class="page-header">
-                        <h1> <font color="RoyalBlue"> Camera access! <small>Testing</small></font></h1>
-                </div>
+            <p><input id="snap" type="file" accept="image/*" capture="camera" onchange="previewFile()"></p>
 
-                <div class="jumbotron">
-					<div class="container">
-				    	<p><input id="snap" type="file" accept="image/*" capture="camera" onchange="previewFile()"></p>
+            <div class="col-sm-6 col-md-4">
+                <a href="#" class="thumbnail">
+                    <img src="" height="200" class="img-rounded">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
-						<div class="col-sm-6 col-md-4">
-						    <a href="#" class="thumbnail">
-						        <img src="" height="200" class="img-rounded">
-						    </a>
-						</div>
-					</div>
-				</div>
-		</div>
+		<!--&lt;!&ndash;<script src="http://code.jquery.com/jquery.min.js"></script>&ndash;&gt;-->
+		<!--&lt;!&ndash;<script src="js/bootstrap.min.js"></script>&ndash;&gt;-->
+		<!--<script language="javascript">-->
 
-		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script language="javascript">
+      <!--function imgurUpload(token, file) {-->
+           <!--var auth;-->
+           <!--if (token) authorization = 'Bearer ' + token;-->
+           <!--else authorization = 'Client-ID ' + 'ba360e8bc81392a';-->
 
-      // function imgurUpload(token, file) {
-      //     var auth;
-      //     if (token) authorization = 'Bearer ' + token;
-      //     else authorization = 'Client-ID ' + 'ba360e8bc81392a';
-      //
-      //     $.ajax({
-      //      url: 'https://api.imgur.com/3/image',
-      //         type: 'POST',
-      //         headers: {
-      //          Authorization: authorization,
-      //          Accept: 'application/json'
-      //      },
-      //      data: {
-      //             // get your key here, quick and fast http://imgur.com/register/api_anon
-      //             // TOKEN d547ce37b6abf6b392440f5415978d23f1e166a5
-      //             type: 'base64',
-      //             image: file
-      //         },
-      //        success: function(result) {
-      //          var id = result.data.id;
-      //          window.location = 'https://imgur.com/gallery/' + id;
-      //        },
-      //        error: function(e) {
-      //                      console.log(e);
-      //                  }
-      //     });
-      // }
+           <!--$.ajax({-->
+            <!--url: 'https://api.imgur.com/3/image',-->
+               <!--type: 'POST',-->
+               <!--headers: {-->
+                <!--Authorization: authorization,-->
+                <!--Accept: 'application/json'-->
+            <!--},-->
+            <!--data: {-->
+                   <!--// get your key here, quick and fast http://imgur.com/register/api_anon-->
+                   <!--// TOKEN d547ce37b6abf6b392440f5415978d23f1e166a5-->
+                   <!--type: 'base64',-->
+                   <!--image: file-->
+               <!--},-->
+              <!--success: function(result) {-->
+                <!--var id = result.data.id;-->
+                <!--window.location = 'https://imgur.com/gallery/' + id;-->
+              <!--},-->
+              <!--error: function(e) {-->
+                            <!--console.log(e);-->
+                        <!--}-->
+           <!--});-->
+      <!--}-->
 
-		   function previewFile(){
-		       var preview = document.querySelector('img'); //selects the query named img
-		       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
-		       var reader  = new FileReader();
+		   <!--function previewFile(){-->
+		       <!--var preview = document.querySelector('img'); //selects the query named img-->
+		       <!--var file    = document.querySelector('input[type=file]').files[0]; //sames as here-->
+		       <!--var reader  = new FileReader();-->
 
-		       reader.onloadend = function () {
-		       	    var debug = reader.result;
-		            preview.src = debug;
-		           // imgurUpload('d547ce37b6abf6b392440f5415978d23f1e166a5', debug.replace(/^data:image\/(png|jpeg);base64,/, ""));
-		       }
+		       <!--reader.onloadend = function () {-->
+		       	    <!--var debug = reader.result;-->
+		            <!--preview.src = debug;-->
+		           <!--imgurUpload('d547ce37b6abf6b392440f5415978d23f1e166a5', debug.replace(/^data:image\/(png|jpeg);base64,/, ""));-->
+		       <!--}-->
 
-		       if (file) {
-		           reader.readAsDataURL(file); //reads the data as a URL
-		       } else {
-		           preview.src = "";
-		       }
-		  }
+		       <!--if (file) {-->
+		           <!--reader.readAsDataURL(file); //reads the data as a URL-->
+		       <!--} else {-->
+		           <!--preview.src = "";-->
+		       <!--}-->
+		  <!--}-->
 
-		  previewFile();  //calls the function named previewFile()
-		</script>
-</body>
-</html>
+		  <!--previewFile();  //calls the function named previewFile()-->
+		<!--</script>-->

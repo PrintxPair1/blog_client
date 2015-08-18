@@ -1,5 +1,5 @@
 angular.module('blogClient')
-  .controller('ImagesCtrl', ['$scope', 'Images','$location', '$routeParams' , function ($scope, Images, $location, $routeParams) {
+  .controller('ImagesCtrl', ['$scope', 'Image','$location', '$routeParams' , function ($scope, Image, $location, $routeParams) {
 
 
   }]);
