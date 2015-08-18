@@ -31,6 +31,11 @@ angular
         controller: 'PostsCtrl',
         controllerAs: 'posts'
       })
+      .when('/images/', {
+        templateUrl: 'scripts/views/images/form.html',
+        controller: 'ImagesCtrl',
+        controllerAs: 'images'
+      })
       .otherwise({
         redirectTo: '/posts'
       });
